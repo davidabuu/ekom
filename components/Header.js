@@ -4,8 +4,14 @@ const Header = () => {
     //The moralisAuth means that we are not trying to connect to a server
     return (
         <div>
-            Decontalized Number Guessing Game.
-            <ConnectButton moralisAuth={false} />
+            <div className="header">
+                <h1>Number Guessing Game</h1>
+                </div>
+                <div className="moralis-flex">
+                    <h1>Decentralized Number Guessing Game</h1>
+                    <ConnectButton moralisAuth={false} />
+                </div>
+            
         </div>
     )
 }

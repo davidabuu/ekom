@@ -1,26 +1,73 @@
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
+        Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+    color: inherit;
+    text-decoration: none;
 }
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.header h1 {
+    text-align: center;
+    background-color: #1890ff;
+    color: #fff;
+    padding: 10px;
+}
+.moralis-flex {
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.game-div {
+    margin-left: 5rem;
+}
+.game-fee p {
+    font-size: 20px;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+.enter-btn {
+    background-color: #1890ff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 20px;
+    color: #fff;
+    margin-top: 10px;
+}
+.guess-btn {
+    background-color: #bae7ff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 20px;
+    margin-top: 10px;
+}
+.player-btn {
+    background-color: #73d13d;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 20px;
+    margin-top: 10px;
+}
+@media(max-width:700px){
+  .moralis-flex{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
   }
-  body {
-    color: white;
-    background: black;
+  .game-div{
+    margin-left: 1rem;
   }
 }
