@@ -1,12 +1,13 @@
 import React from "react"
 import { ConnectButton } from "web3uikit"
-const Header2 = () => {
+const Header = () => {
+    //The moralisAuth means that we are not trying to connect to a server
     return (
         <div>
-            Decontalized Lottery
+            Decontalized Number Guessing Game
             <ConnectButton moralisAuth={false} />
         </div>
     )
 }
 
-export default Header2
+export default Header
