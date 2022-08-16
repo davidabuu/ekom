@@ -85,8 +85,8 @@ const NumberGameEntrance = () => {
     }
     const handleErrorNotification = () => {
         dispatch({
-            type: "error",
-            message: "You Failed",
+            type: "success",
+            message: "You Passed Congratultions",
             title: "Tx Notfication",
             position: "topR",
             icon: "bell",
@@ -95,7 +95,7 @@ const NumberGameEntrance = () => {
     const numGuess = async () => {
         await guessTheNumber({
             onSuccess: youPassed,
-            onError: (error) => alert("You failed Try again"),
+            onError: (error) => console.log(error),
         })
     }
     return (
