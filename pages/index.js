@@ -7,8 +7,8 @@ export default function Home() {
     return (
         <div className={styles.container}>
             <Head>
-                <title>Smart Contract Lottery</title>
-                <meta name="description" content="Our Smart Contract Lottery" />
+                <title>Number Guessing Game</title>
+                <meta name="description" content="My Number Guessing Game" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <Header />
