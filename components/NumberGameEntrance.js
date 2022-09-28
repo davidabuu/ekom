@@ -5,7 +5,7 @@ import { abi, contractAddress } from "../constants"
 import { ethers } from "ethers"
 import { useNotification } from "web3uikit"
 import Link from "next/link"
-import { Button, Input } from "antd"
+import { Button, Input, notification } from "antd"
 const NumberGameEntrance = () => {
     const { chainId: chainIdHex, isWeb3Enabled } = useMoralis()
     const [entranceFee, setEntranceFee] = useState("0")
@@ -75,20 +75,18 @@ const NumberGameEntrance = () => {
         })
     }
     const handleSuccess = async (tx) => {
-        waitNotification()
+    notification.info({
+        description:'Please wait while your transaction completes',
+        placement:'topRight'
+    })
         await tx.wait(1)
-        handleNewNotification(tx)
+        notification.info({
+            description:'Transaction Completed',
+            placement:'topRight'
+        })
         updateUI()
     }
-    const handleNewNotification = () => {
-        dispatch({
-            type: "info",
-            message: "Transaction Completed",
-            title: "Tx Notfication",
-            position: "topR",
-            icon: "bell",
-        })
-    }
+  
     const waitNotification = () => {
         dispatch({
             type: "info",
@@ -114,20 +112,19 @@ const NumberGameEntrance = () => {
         })
     }
     const youFailed = async (tx) => {
-        waitNotification()
-        handleErrorNotification(tx)
+        notification.info({
+            description:'Please wait while your transaction completes',
+            placement:'topRight'
+        })
+            notification.info({
+                description:'You failed Try Again',
+                placement:'topRight'
+            })
+      
         updateUI()
     }
 
-    const handleErrorNotification = (tx) => {
-        dispatch({
-            type: "error",
-            message: "You failed",
-            title: "Tx Notfication",
-            position: "topR",
-            icon: "bell",
-        })
-    }
+    
 
     const guessNumberFunction = async (e) => {
         e.preventDefault()
