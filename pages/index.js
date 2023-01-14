@@ -1,13 +1,21 @@
-import Head from "next/head"
-import Header from "../components/Header"
-import UserWebLayout from "../components/UserWebLayout"
+import { Email, Facebook, Instagram, Twitter } from "@material-ui/icons"
+import Header from "../src/components/Header"
+import UserWebLayout from "../src/components/UserWebLayout"
+import Wallet from "../src/components/Wallet"
+import { LandingStyle } from "../styles/LandingPageStyle"
 
 export default function Home() {
     return (
-        <div>
-            <UserWebLayout webtitle="Home Page">
+        <UserWebLayout webtitle="Home Page">
+            <LandingStyle>
                 <Header />
-            </UserWebLayout>
-        </div>
+                <Wallet />
+                <div className="socials">
+                    <Email className="link" />
+                    <Twitter className="link" />
+                    <Instagram className="link" />
+                </div>
+            </LandingStyle>
+        </UserWebLayout>
     )
 }
