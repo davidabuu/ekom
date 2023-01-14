@@ -112,6 +112,9 @@ width: 250px;
         .btn-input {
           flex-direction: column;
         }
+        .btn-input .btn-notified{
+            margin: 1rem 0;;
+        }
     }
     /*End of Wallet style*/
 }

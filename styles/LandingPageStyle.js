@@ -4,4 +4,7 @@ export const LandingStyle = styled.div`
     background-size: cover;
     background-position: center;
     height: 100vh;
+    @media (max-width: 800px) {
+        height: 100%;
+    }
 `
